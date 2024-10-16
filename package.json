@@ -10,8 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@aws-amplify/cli": "^12.13.0",
+    "@aws-amplify/ui-components": "^1.9.40",
+    "aws-amplify": "^4.3.46",
+    "aws-amplify-react": "^5.1.43",
+    "lucide-react": "^0.453.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.27.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",
