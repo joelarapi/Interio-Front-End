@@ -1,0 +1,55 @@
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  width: 100%;
+  color: black;
+  height: 67px;
+  margin: 0;
+  border-bottom: 1px solid black;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.navbar a{
+  text-decoration: none;
+  color: black;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.navbar p {
+  font-weight: 700;
+  font-size: 20px;
+  margin-left: 40px;
+}
+
+.notifIcon{
+  width: 24px;
+  height: 24px;
+}
+
+.navbar button {
+  border: none;
+  background-color: inherit;
+  color: black;
+  font-family: "Poppins";
+  font-size: 16px;
+  margin-right: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.leftSide{
+  margin-right: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar img{
+  cursor: pointer;
+  color: black;
+}
+
