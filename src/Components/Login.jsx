@@ -44,6 +44,7 @@ function Login() {
     }
 
     return (
+        <div className="outerContainer">
         <div className={styles.container}>
             <div className={`${styles.imageContainer} ${isRegister ? styles.loginBackground : styles.signupBackground}`}>
             </div>
@@ -58,7 +59,8 @@ function Login() {
                     {isRegister ? (
                         <form onSubmit={handleSubmit} className={`${styles.form} ${styles.login}`}>
                             <div className={styles.inputGroup}>
-                                <label className={styles.label}>Email</label>
+                                <div className={styles.labelWrapper}>
+                                <label className={`${styles.label} ${email ? styles.labelFocused : ''}`}>Email</label>
                                 <input
                                     type="email"
                                     value={email}
@@ -66,10 +68,12 @@ function Login() {
                                     required
                                     className={`${styles.input} ${isEmailFilled ? styles.filled : ''}`}
                                 />
+                                </div>
                             </div>
                             <div className={styles.inputGroup}>
-                                <label className={styles.label}>Password</label>
-                                <div className={styles.passwordWrapper}>
+                                <div className={styles.labelWrapper}>
+                                <label className={`${styles.label} ${password ? styles.labelFocused : ''}`}>Password</label>
+                                    <div className={styles.passwordWrapper}>
                                     <input
                                         type={showPassword ? "text" : "password"}
                                         value={password}
@@ -84,6 +88,7 @@ function Login() {
                                     >
                                         {showPassword ? <Eye size={30} /> : <EyeOff size={30} />}
                                     </button>
+                                    </div>
                                 </div>
                             </div>
                             <div className={styles.forgotPassword}>
@@ -101,16 +106,17 @@ function Login() {
                         <form onSubmit={handleSubmit} className={styles.form}>
                             <div className={styles.type}>
                                 <div className={`${styles.typeItem} ${userType === 'client' ? styles.selected : ''}`} onClick={() => handleUserType('client')}>
-                                    <img src="/client.png" alt="Client" />
+                                    <img src="/Client.png" alt="Client" />
                                     <span>Client</span>
                                 </div>
                                 <div className={`${styles.typeItem} ${userType === 'business' ? styles.selected : ''}`} onClick={() => handleUserType('business')}>
-                                    <img src="/business.png" alt="Business" />
+                                    <img src="/Bussiness.png" alt="Business" />
                                     <span>Business</span>
                                 </div>
                             </div>
                             <div className={styles.inputGroup}>
-                                <label className={styles.label}>Full Name</label>
+                                <div className={styles.labelWrapper}>
+                                <label className={`${styles.label} ${fullName ? styles.labelFocused : ''}`}>Full Name</label>
                                 <input
                                     type="text"
                                     value={fullName}
@@ -118,9 +124,11 @@ function Login() {
                                     required
                                     className={`${styles.input} ${isFullNameFilled ? styles.filled : ''}`}
                                 />
+                                </div>
                             </div>
                             <div className={styles.inputGroup}>
-                                <label className={styles.label}>Email</label>
+                                <div className={styles.labelWrapper}>
+                                <label className={`${styles.label} ${email ? styles.labelFocused : ''}`}>Email</label>
                                 <input
                                     type="email"
                                     value={email}
@@ -128,9 +136,11 @@ function Login() {
                                     required
                                     className={`${styles.input} ${isEmailFilled ? styles.filled : ''}`}
                                 />
+                                </div>
                             </div>
                             <div className={styles.inputGroup}>
-                                <label className={styles.label}>Password</label>
+                                <div className={styles.labelWrapper}>
+                                <label className={`${styles.label} ${password ? styles.labelFocused : ''}`}>Password</label>
                                 <div className={styles.passwordWrapper}>
                                     <input
                                         type={showPassword ? "text" : "password"}
@@ -147,9 +157,11 @@ function Login() {
                                         {showPassword ? <Eye size={30} /> : <EyeOff size={30} />}
                                     </button>
                                 </div>
+                                </div>
                             </div>
                             <div className={styles.inputGroup}>
-                                <label className={styles.label}>Confirm password</label>
+                                <div className={styles.labelWrapper}>
+                                <label className={`${styles.label} ${confirmPassword ? styles.labelFocused : ''}`}>Confirm password</label>
                                 <div className={styles.passwordWrapper}>
                                     <input
                                         type={showConfirmPassword ? "text" : "password"}
@@ -166,9 +178,7 @@ function Login() {
                                         {showConfirmPassword ? <Eye size={30} /> : <EyeOff size={30} />}
                                     </button>
                                 </div>
-                            </div>
-                            <div className={styles.forgotPassword}>
-                                <span>Forgot password?</span>
+                                </div>
                             </div>
                             <button
                                 type="submit"
@@ -181,6 +191,7 @@ function Login() {
                     )}
                 </div>
             </div>
+        </div>
         </div>
     );
 }

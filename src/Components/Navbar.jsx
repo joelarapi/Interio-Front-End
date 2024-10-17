@@ -12,7 +12,7 @@ const Navbar = () => {
     <div className={classes.leftSide}>
 
       <NavLink>Home</NavLink>
-      <NavLink>Profile</NavLink>
+      <NavLink to='/businessprofile'>Profile</NavLink>
       <button>Log Out</button>
       <img src={notifIcon} className={classes.notifIcon}/>
 

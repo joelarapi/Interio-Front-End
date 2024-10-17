@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./ClientProfile.module.css";
+import styles from "./BusinessProfile.module.css";
 
 const ClientProfile = () => {
   return (
@@ -30,20 +30,7 @@ const ClientProfile = () => {
               </div>
             </div>
           </div>
-          <div className={styles.postcontent}>
-            <div className={styles.innercontent}>
-              <div className={styles.posterstext}>
-                <h3>Request Title</h3>
-                <h5>9 hours ago | Category</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
-              </div>
-              <div className={styles.posters}>
-                <img src="pexels-algrey-3705539 2.png" alt="post"></img>
-                <img src="Frame 60.png" alt="post"></img>
-                <img src="pexels-algrey-3705539 2 (1).png" alt="post"></img>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </>
