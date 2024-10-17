@@ -1,0 +1,66 @@
+.sideContainer{
+  margin-top: 68px;
+  position: absolute;
+  left: 0;
+  width: 265px;
+  background-color: rgba(244, 244, 244, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+}
+
+.container{
+  display: flex;
+}
+
+.sideFiltersSection h2{
+  font-weight: 600 ;
+  font-size: 20px;
+}
+
+.filterSection h3{
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.filterSection{
+  margin-bottom: 20px;
+}
+
+.sideMain{
+  margin-top: 88px;
+  margin-left: 290px;
+}
+
+.mainContent{
+  margin: auto;
+  width: 70%;
+}
+
+
+.searchBar{
+  width: 370px;
+  height: 46px;
+  border: 1px solid silver;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.searchBar input{
+ border: none;
+ width: 100%;
+ outline: none;
+}
+
+.searchBar input::placeholder{
+  font-family: "Poppins";
+  font-size: 16px;
+}
+
+.searchBar img{
+  margin-left: 8px;
+  margin-right: 10px;
+}
+
