@@ -1,6 +1,6 @@
-.sideContainer{
+.sideContainer {
   margin-top: 68px;
-  position: absolute;
+  /* position: absolute; */
   left: 0;
   width: 245px;
   background-color: rgba(244, 244, 244, 1);
@@ -10,57 +10,171 @@
   padding-left: 45px;
 }
 
-.container{
+.container {
   display: flex;
 }
 
-.sideFiltersSection h2{
-  font-weight: 600 ;
+.sideFiltersSection h2 {
+  font-weight: 600;
   font-size: 20px;
 }
 
-.filterSection h3{
+.filterSection h3 {
   font-size: 20px;
   font-weight: 400;
   margin: 0;
 }
 
-.filterSection{
+.filterSection {
   margin-bottom: 20px;
 }
 
-.sideMain{
-  margin-top: 88px;
-  margin-left: 290px;
-}
-
-.mainContent{
+.sideMain {
   margin: auto;
-  width: 70%;
+  margin-top: 88px;
+  width: 80%;
 }
 
+.mainContent {
+  margin: auto;
+  width: 80%;
+}
 
-.searchBar{
-  width: 370px;
+.searchBar {
+  width: 680px;
   height: 46px;
   border: 1px solid silver;
   border-radius: 10px;
   display: flex;
   align-items: center;
 }
-.searchBar input{
- border: none;
- width: 100%;
- outline: none;
+.searchBar input {
+  border: none;
+  width: 100%;
+  outline: none;
 }
 
-.searchBar input::placeholder{
+.searchBar input::placeholder {
   font-family: "Poppins";
   font-size: 16px;
 }
 
-.searchBar img{
+.searchBar img {
   margin-left: 8px;
   margin-right: 10px;
+}
+
+.section {
+  width: 100%;
+}
+
+.cardSection {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 26px;
+  width: 100%;
+}
+
+.headline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.headline p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.headline a {
+  text-decoration: none;
+  color: rgba(170, 126, 81, 1);
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 316px;
+  height: 322px;
+  border: 1px solid silver;
+  border-radius: 5px;
+  scroll-snap-align: start; 
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  padding: 6px 12px;
+}
+
+.description h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.postTime {
+  font-size: 14px;
+  color: rgba(153, 153, 153, 1);
+  margin: 0;
+}
+
+.description button {
+  background-color: rgba(77, 70, 42, 1);
+  color: white;
+  font-family: "Poppins";
+  border: none;
+  border-radius: 5px;
+  width: 284px;
+  height: 34px;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+.description button:hover{
+opacity: 0.8;
+transition: 0.2s;
+}
+
+.location{
+  margin: 0;
+}
+
+.cardSectionWrapper {
+  position: relative; 
+  display: flex;
+  align-items: center;
+  overflow: hidden; 
+}
+
+.scrollButtonLeft, .scrollButtonRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 2;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8); 
+}
+
+.scrollButtonLeft {
+  left: 10px; 
+}
+
+.scrollButtonRight {
+  right: 10px; 
+}
+.cardSection::-webkit-scrollbar {
+  display: none;
+}
+
+.cardSection {
+  -ms-overflow-style: none;
+  scrollbar-width: none;  
 }
 
