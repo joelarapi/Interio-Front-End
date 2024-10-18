@@ -1,5 +1,6 @@
 import classes from "./Dashboard.module.css";
 import loopIcon from "../../icons/search-loop-icon.png";
+import { Link } from "react-router-dom";
 
 const DashboardMain = () => {
   return (

@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
+  background-color: rgba(33, 27, 27, 1);
   width: 100%;
   color: black;
   height: 67px;
@@ -13,11 +13,22 @@
   z-index: 1;
 }
 
+.webName{
+  font-family: "Potta One";
+  color: rgba(170, 126, 81, 1);
+  font-size: 32px;
+}
+
 .navbar a{
   text-decoration: none;
-  color: black;
-  margin-left: 10px;
-  margin-right: 10px;
+  color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.navbar a:hover{
+  color: rgba(170, 126, 81, 1);
+  transition: 0.2s;
 }
 
 .navbar p {
@@ -31,16 +42,6 @@
   height: 24px;
 }
 
-.navbar button {
-  border: none;
-  background-color: inherit;
-  color: black;
-  font-family: "Poppins";
-  font-size: 16px;
-  margin-right: 10px;
-  margin-left: 10px;
-  cursor: pointer;
-}
 
 .leftSide{
   margin-right: 40px;
