@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './Components/Login.jsx'
 import Navbar from './Components/Navbar.jsx';
 import Dashboard from './Components/Dashboard/Dashboard.jsx';
-import BusinessProfile from "./Components/BusinessProfile.jsx"
+import ClientProfile from './Components/ClientProfile.jsx';
+import BusinessProfile from './Components/BusinessProfile.jsx';
 
 
 
@@ -17,6 +18,7 @@ function App() {
                 <Routes>
                 <Route path="/dashboard" element={<Dashboard/>} />
                     <Route path="/login" element={<Login />} />
+                    <Route path="/clientprofile" element={<ClientProfile />} />
                     <Route path="/businessprofile" element={<BusinessProfile />} />
                 </Routes>
             </div>

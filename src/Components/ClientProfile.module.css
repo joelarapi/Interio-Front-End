@@ -1,0 +1,83 @@
+.profilemain {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+
+.profilebar {
+    margin-top: 145px;
+    margin-left: 41px;
+    width: 285px;
+    height: 840px;
+    background-color: rgba(84, 84, 84, 1);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    flex: 0 0 25%;
+}
+
+.imageprofile {
+    position: absolute;
+    top: 93px;
+    left: 150px;
+}
+
+.profileinfo {
+    text-align: center;
+    padding-top: 75px;
+}
+
+.profileinfo h3 {
+    font-weight: 500;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.innerinfo h5 {
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.mainposts {
+    flex: 0 0 75%;
+    margin-left: 32px;
+    margin-top: 145px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.innercontent {
+    width: 757.55px;
+    height: 417px;
+    border-radius: 7.79px;
+    border: 0.78px solid rgba(0, 0, 0, 0.5);
+}
+
+.posterstext {
+    margin-left: 27.28px;
+}
+
+.posterstext h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15.59px;
+    font-weight: 400;
+    line-height: 23.38px;
+    text-align: left;
+}
+
+.posterstext p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+.posters{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 49px;
+    margin-top: 30px;
+}

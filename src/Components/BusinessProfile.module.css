@@ -7,29 +7,38 @@
 
 .profilebar {
     margin-top: 145px;
-    margin-left: 41px;
+    margin-left: 111px;
     width: 285px;
     height: 840px;
-    background-color: rgba(84, 84, 84, 1);
+    background-color: rgba(77, 70, 42, 1);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     flex: 0 0 25%;
 }
 
+
+.profilebar img {
+    border-radius: 50%;
+}
+
 .imageprofile {
     position: absolute;
     top: 93px;
-    left: 150px;
+    left: 220px;
 }
 
 .profileinfo {
     text-align: center;
     padding-top: 75px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
 }
 
 .profileinfo h3 {
     font-weight: 500;
     color: white;
+    font-size: 24px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -37,47 +46,75 @@
     font-weight: 300;
     font-family: 'Poppins', sans-serif;
     color: white;
+    font-size: 20px;
 }
 
-.mainposts {
-    flex: 0 0 75%;
-    margin-left: 32px;
-    margin-top: 145px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+.innercontainer h3 {
+    font-weight: 700;
+    font-size: 20px;
+    color: rgba(77, 70, 42, 1);
 }
 
-.innercontent {
-    width: 757.55px;
-    height: 417px;
-    border-radius: 7.79px;
-    border: 0.78px solid rgba(0, 0, 0, 0.5);
-}
-
-.posterstext {
-    margin-left: 27.28px;
-}
-
-.posterstext h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 15.59px;
-    font-weight: 400;
-    line-height: 23.38px;
-    text-align: left;
-}
-
-.posterstext p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    text-align: left;
-}
-
-.posters{
+.portfoliomedia {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 49px;
-    margin-top: 30px;
+    gap: 25px;
+}
+
+.portfoliomedia img {
+    border-radius: 20px;
+}
+
+.reviewcontainer {
+    margin-top: 57px;
+}
+
+.maininfo {
+    margin-top: 120px;
+    margin-left: 41px;
+}
+
+.innerreview {
+    width: 852px;
+    height: 221px;
+    border-radius: 20px;
+    background-color: rgba(239, 239, 239, 1);
+    display: flex;
+    flex-direction: row;
+}
+
+.innerreview img {
+    margin-left: 23px;
+    margin-top: 18px;
+    width: 55px;
+    height: 55px;
+}
+
+
+.reviewinfo {
+    margin-left: 23px;
+    width: 731px;
+    height: 71px;
+}
+
+.innercontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+}
+
+.reviewinfo h4 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.reviewinfo p {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.reviewinfo h5 {
+    font-size: 18px;
+    font-weight: 400;
 }
