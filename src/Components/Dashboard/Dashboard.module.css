@@ -2,12 +2,12 @@
   margin-top: 68px;
   position: absolute;
   left: 0;
-  width: 265px;
+  width: 245px;
   background-color: rgba(244, 244, 244, 1);
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding-left: 25px;
+  padding-left: 45px;
 }
 
 .container{

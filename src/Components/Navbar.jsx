@@ -6,14 +6,14 @@ import notifIcon from '../icons/notifications-bell-icon.png';
 const Navbar = () => {
   return (
     <div className={classes.navbar}>
-    <p>Interio</p>
+    <p className={classes.webName}>Interio</p>
 
 
     <div className={classes.leftSide}>
 
       <NavLink>Home</NavLink>
-      <NavLink to='/businessprofile'>Profile</NavLink>
-      <button>Log Out</button>
+      <NavLink>My Requests</NavLink>
+      <NavLink>Profile</NavLink>
       <img src={notifIcon} className={classes.notifIcon}/>
 
     </div>
