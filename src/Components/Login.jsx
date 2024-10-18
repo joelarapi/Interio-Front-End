@@ -2,26 +2,42 @@ import { useState, useEffect } from 'react';
 import styles from './Login.module.css';
 import { Eye, EyeOff } from "lucide-react";
 
+
 function Login() {
     const [email, setEmail] = useState('');
+    const [createEmail, setCreateEmail] = useState('');
+    const [createPassword, setCreatePassword] = useState('');
     const [password, setPassword] = useState('');
-    const [fullName, setFullName] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     const [isPasswordFilled, setIsPasswordFilled] = useState(false);
     const [isEmailFilled, setIsEmailFilled] = useState(false);
-    const [isFullNameFilled, setIsFullNameFilled] = useState(false);
+    const [isCreateEmailFilled, setIsCreateEmailFilled] = useState(false);
+    const [isCreatePasswordFilled, setIsCreatePasswordFilled] = useState(false);
     const [isConfirmPasswordFilled, setIsConfirmPasswordFilled] = useState(false);
     const [isRegister, setIsRegister] = useState(false);
-    const [userType, setUserType] = useState('');
+    const [userType, setUserType] = useState('client');
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [isFirstNameFilled, setIsFirstNameFilled] = useState(false);
+    const [isLastNameFilled, setIsLastNameFilled] = useState(false);
+    const [businessName, setBusinessName] = useState('');
+    const [location, setLocation] = useState('');
+    const [isBusinessNameFilled, setIsBusinessNameFilled] = useState(false);
+    const [isLocationFilled, setIsLocationFilled] = useState(false);
 
     useEffect(() => {
         setIsEmailFilled(email !== '');
         setIsPasswordFilled(password !== '');
-        setIsFullNameFilled(fullName !== '');
         setIsConfirmPasswordFilled(confirmPassword !== '');
-    }, [email, password, fullName, confirmPassword]);
+        setIsCreatePasswordFilled(createPassword !== '');
+        setIsCreateEmailFilled(createEmail !== '');
+        setIsFirstNameFilled(firstName !== '');
+        setIsLastNameFilled(lastName !== '');
+        setIsBusinessNameFilled(businessName !== '');
+        setIsLocationFilled(location !== '');
+    }, [email, password, businessName,location, confirmPassword, createEmail, createPassword, firstName, lastName]);
 
     const toggleFormType = () => {
         setIsRegister(!isRegister);
@@ -107,47 +123,86 @@ function Login() {
                             <div className={styles.type}>
                                 <div className={`${styles.typeItem} ${userType === 'client' ? styles.selected : ''}`} onClick={() => handleUserType('client')}>
                                     <img src="/Client.png" alt="Client" />
-                                    <span>Client</span>
+                                    <span className={styles.left}>Client</span>
                                 </div>
                                 <div className={`${styles.typeItem} ${userType === 'business' ? styles.selected : ''}`} onClick={() => handleUserType('business')}>
                                     <img src="/Bussiness.png" alt="Business" />
-                                    <span>Business</span>
+                                    <span className={styles.right}>Business</span>
                                 </div>
                             </div>
-                            <div className={styles.inputGroup}>
+                            {userType === 'client' ? (<div className={styles.inputGroupClient}>
                                 <div className={styles.labelWrapper}>
-                                <label className={`${styles.label} ${fullName ? styles.labelFocused : ''}`}>Full Name</label>
-                                <input
-                                    type="text"
-                                    value={fullName}
-                                    onChange={(e) => setFullName(e.target.value)}
-                                    required
-                                    className={`${styles.input} ${isFullNameFilled ? styles.filled : ''}`}
-                                />
-                                </div>
-                            </div>
-                            <div className={styles.inputGroup}>
-                                <div className={styles.labelWrapper}>
-                                <label className={`${styles.label} ${email ? styles.labelFocused : ''}`}>Email</label>
-                                <input
-                                    type="email"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    required
-                                    className={`${styles.input} ${isEmailFilled ? styles.filled : ''}`}
-                                />
-                                </div>
-                            </div>
-                            <div className={styles.inputGroup}>
-                                <div className={styles.labelWrapper}>
-                                <label className={`${styles.label} ${password ? styles.labelFocused : ''}`}>Password</label>
-                                <div className={styles.passwordWrapper}>
+                                    <label className={`${styles.label} ${firstName ? styles.labelFocused : ''}`}>First
+                                        Name</label>
                                     <input
-                                        type={showPassword ? "text" : "password"}
-                                        value={password}
-                                        onChange={(e) => setPassword(e.target.value)}
+                                        type="text"
+                                        value={firstName}
+                                        onChange={(e) => setFirstName(e.target.value)}
                                         required
-                                        className={`${styles.input} ${isPasswordFilled ? styles.filled : ''}`}
+                                        className={`${styles.input} ${isFirstNameFilled ? styles.filled : ''}`}
+                                    />
+                                </div>
+                                <div className={styles.labelWrapper}>
+                                    <label className={`${styles.label} ${lastName ? styles.labelFocused : ''}`}>Last
+                                        Name</label>
+                                    <input
+                                        type="text"
+                                        value={lastName}
+                                        onChange={(e) => setLastName(e.target.value)}
+                                        required
+                                        className={`${styles.input} ${isLastNameFilled ? styles.filled : ''}`}
+                                    />
+                                </div>
+                            </div>) : (
+                                <div className={styles.inputGroupClient}>
+                                    <div className={styles.labelWrapper}>
+                                        <label className={`${styles.label} ${businessName ? styles.labelFocused : ''}`}>Business
+                                            Name</label>
+                                        <input
+                                            type="text"
+                                            value={businessName}
+                                            onChange={(e) => setBusinessName(e.target.value)}
+                                            required
+                                            className={`${styles.input} ${isBusinessNameFilled ? styles.filled : ''}`}
+                                        />
+                                    </div>
+                                    <div className={styles.labelWrapper}>
+                                        <label className={`${styles.label} ${location ? styles.labelFocused : ''}`}>Location</label>
+                                        <input
+                                            type="text"
+                                            value={location}
+                                            onChange={(e) => setLocation(e.target.value)}
+                                            required
+                                            className={`${styles.input} ${isLocationFilled ? styles.filled : ''}`}
+                                        />
+                                    </div>
+                                </div>
+                            )
+                            }
+                            <div className={styles.inputGroup}>
+                                <div className={styles.labelWrapper}>
+                                    <label
+                                        className={`${styles.label} ${createEmail ? styles.labelFocused : ''}`}>Email</label>
+                                    <input
+                                        type="email"
+                                        value={createEmail}
+                                        onChange={(e) => setCreateEmail(e.target.value)}
+                                        required
+                                        className={`${styles.input} ${isCreateEmailFilled ? styles.filled : ''}`}
+                                    />
+                                </div>
+                            </div>
+                            <div className={styles.inputGroup}>
+                                <div className={styles.labelWrapper}>
+                                    <label
+                                        className={`${styles.label} ${createPassword ? styles.labelFocused : ''}`}>Password</label>
+                                    <div className={styles.passwordWrapper}>
+                                        <input
+                                            type={showPassword ? "text" : "password"}
+                                            value={createPassword}
+                                            onChange={(e) => setCreatePassword(e.target.value)}
+                                            required
+                                        className={`${styles.input} ${isCreatePasswordFilled ? styles.filled : ''}`}
                                     />
                                     <button
                                         type="button"
@@ -182,8 +237,8 @@ function Login() {
                             </div>
                             <button
                                 type="submit"
-                                className={`${styles.submitButton} ${(isEmailFilled && isPasswordFilled && isFullNameFilled && isConfirmPasswordFilled) ? styles.active : ''}`}
-                                disabled={!(isEmailFilled && isPasswordFilled && isFullNameFilled && isConfirmPasswordFilled)}
+                                className={`${styles.submitButton} ${(isEmailFilled && isPasswordFilled && isLocationFilled && isBusinessNameFilled && isConfirmPasswordFilled && isCreatePasswordFilled && isCreateEmailFilled && isFirstNameFilled && isLastNameFilled) ? styles.active : ''}`}
+                                disabled={!(isEmailFilled && isPasswordFilled && isConfirmPasswordFilled && isCreatePasswordFilled && isCreateEmailFilled && isFirstNameFilled && isLastNameFilled && isBusinessNameFilled && isLocationFilled)}
                             >
                                 Continue
                             </button>
