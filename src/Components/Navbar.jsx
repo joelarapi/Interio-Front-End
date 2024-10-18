@@ -1,6 +1,6 @@
-import React from 'react'
-import classes from './Navbar.module.css'
-import { NavLink } from 'react-router-dom'
+import React from 'react';
+import classes from './Navbar.module.css';
+import { NavLink } from 'react-router-dom';
 import notifIcon from '../icons/notifications-bell-icon.png';
 
 const Navbar = () => {
