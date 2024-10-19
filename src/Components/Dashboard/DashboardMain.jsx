@@ -35,7 +35,7 @@ const DashboardMain = () => {
               &#8592;
             </button>
 
-            <div className={classes.cardSection}>
+            <div className={classes.cardSection} ref={scrollRef}>
               <div className={classes.card}>
                 <img src={placeholderImage} />
                 <div className={classes.description}>
