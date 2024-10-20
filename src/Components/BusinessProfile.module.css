@@ -129,3 +129,22 @@
     font-size: 160%;
     color: yellow;
 }
+
+.swipermedia {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 12px;
+}
+
+.arrows{
+    border: none;
+    background-color: white;
+    top: 50%;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1;
+    color: gray;
+}
+

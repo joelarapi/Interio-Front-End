@@ -34,9 +34,12 @@ const BusinessProfile = () => {
           <div className={styles.innercontainer}>
             <h3>Portfolio</h3>
             <div className={styles.portfoliomedia}>
-              <img src="media1.png"></img>
-              <img src="media2.png"></img>
-              <img src="media3.png"></img>
+              <div className={styles.swipermedia}>
+                <img src="media1.png"></img>
+                <img src="media2.png"></img>
+                <img src="media3.png"></img>
+                <button className={styles.arrows}>&#10095;</button>
+              </div>
             </div>
           </div>
           <div className={styles.innercontainer}>
