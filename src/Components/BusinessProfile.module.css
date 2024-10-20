@@ -28,11 +28,12 @@
 }
 
 .profileinfo {
-    text-align: center;
-    padding-top: 75px;
+    padding-top: 88px;
     display: flex;
     flex-direction: column;
-    gap: 0px;
+    text-align: left;
+    padding-left: 49px;
+    line-height: 0px;
 }
 
 .profileinfo h3 {
@@ -47,6 +48,10 @@
     font-family: 'Poppins', sans-serif;
     color: white;
     font-size: 20px;
+}
+
+.links {
+    text-decoration: none;
 }
 
 .innercontainer h3 {
@@ -95,6 +100,7 @@
     margin-left: 23px;
     width: 731px;
     height: 71px;
+    line-height: 16px;
 }
 
 .innercontainer {
@@ -117,4 +123,9 @@
 .reviewinfo h5 {
     font-size: 18px;
     font-weight: 400;
+}
+
+.stars {
+    font-size: 160%;
+    color: yellow;
 }

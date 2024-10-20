@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./BusinessProfile.module.css";
+import { Link } from "react-router-dom";
 
 const BusinessProfile = () => {
   return (
@@ -17,9 +18,15 @@ const BusinessProfile = () => {
                 <img src="fi-ss-star.png"></img>
                 <img src="fi-ss-star.png"></img>
               </div>
-              <h5>Category</h5>
-              <h5>Location</h5>
-              <h5>14 Clients</h5>
+              <Link to={"/"} className={styles.links}>
+                <h5>Category</h5>
+              </Link>
+              <Link to={"/"} className={styles.links}>
+                <h5>Location</h5>
+              </Link>
+              <Link to={"/"} className={styles.links}>
+                <h5>14 Clients</h5>
+              </Link>
             </div>
           </div>
         </div>
@@ -39,13 +46,13 @@ const BusinessProfile = () => {
                 <img src="Group 4.png"></img>
                 <div className={styles.reviewinfo}>
                   <h4>Client's Name</h4>
-                  {/* <div className={styles.stars}>
-                    <img src="fi-ss-star.png" id="star"></img>
-                    <img src="fi-ss-star.png" id="star"></img>
-                    <img src="fi-ss-star.png" id="star"></img>
-                    <img src="fi-ss-star.png" id="star"></img>
-                    <img src="fi-ss-star.png" id="star"></img>
-                  </div> */}
+                  <div className={styles.stars}>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                  </div>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
                   <h5>Location | dd/mm/yyyy</h5>
                 </div>
@@ -56,13 +63,13 @@ const BusinessProfile = () => {
                 <img src="Group 4.png"></img>
                 <div className={styles.reviewinfo}>
                   <h4>Client's Name</h4>
-                  {/* <div className={styles.stars}>
-                    <img src="fi-ss-star.png" id="star"></img>
-                    <img src="fi-ss-star.png" id="star"></img>
-                    <img src="fi-ss-star.png" id="star"></img>
-                    <img src="fi-ss-star.png" id="star"></img>
-                    <img src="fi-ss-star.png" id="star"></img>
-                  </div> */}
+                  <div className={styles.stars}>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                  </div>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
                   <h5>Location | dd/mm/yyyy</h5>
                 </div>
