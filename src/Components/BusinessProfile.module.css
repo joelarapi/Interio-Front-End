@@ -2,11 +2,12 @@
     display: flex;
     height: 100vh;
     width: 100%;
+    margin-top: 43px;
 }
 
 
 .profilebar {
-    margin-top: 145px;
+    margin-top: 99px;
     margin-left: 111px;
     width: 285px;
     height: 840px;
@@ -17,15 +18,12 @@
 }
 
 
-.profilebar img {
+.imageprofile {
     border-radius: 50%;
+    display: block;
+    margin: -64px auto;
 }
 
-.imageprofile {
-    position: absolute;
-    top: 93px;
-    left: 220px;
-}
 
 .profileinfo {
     padding-top: 88px;
@@ -33,7 +31,7 @@
     flex-direction: column;
     text-align: left;
     padding-left: 49px;
-    line-height: 0px;
+    width: 285px;
 }
 
 .profileinfo h3 {
@@ -41,6 +39,20 @@
     color: white;
     font-size: 24px;
     font-family: 'Poppins', sans-serif;
+}
+
+.profilebutton button {
+    width: 232px;
+    height: 34px;
+    display: block;
+    margin: 15px auto auto 0px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgba(77, 70, 42, 1);
+
 }
 
 .innerinfo h5 {
@@ -55,9 +67,10 @@
 }
 
 .innercontainer h3 {
-    font-weight: 700;
-    font-size: 20px;
+    font-size: 32px;
+    font-weight: 400;
     color: rgba(77, 70, 42, 1);
+    margin: 14px 0px 0px 0px;
 }
 
 .portfoliomedia {
@@ -75,8 +88,8 @@
 }
 
 .maininfo {
-    margin-top: 120px;
-    margin-left: 41px;
+    margin-top: 43px;
+    margin-left: 44px;
 }
 
 .innerreview {
@@ -106,7 +119,9 @@
 .innercontainer {
     display: flex;
     flex-direction: column;
-    gap: 31px;
+    gap: 14px;
+    margin-top: 75px;
+    width: 907px;
 }
 
 .reviewinfo h4 {
@@ -132,19 +147,90 @@
 
 .swipermedia {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    gap: 12px;
+    gap: 23px;
 }
 
-.arrows{
-    border: none;
-    background-color: white;
-    top: 50%;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    z-index: 1;
-    color: gray;
+.aboutbusiness {
+    width: 900px;
+    height: 120px;
 }
 
+.aboutbusiness h3 {
+    font-size: 32px;
+    font-weight: 400;
+    margin: 43px 0px 0px 0px;
+}
+
+.aboutbusiness p {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 1);
+    margin: 4px 0px 0px 0px;
+}
+
+.prevWork {
+    width: 907px;
+    height: 372px;
+}
+
+.prevWork h3 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+}
+
+.innerwork {
+    display: grid;
+    grid-template-columns: 150px 716px;
+    margin-bottom: 24px;
+    margin-top: 40px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title h4 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    color: rgba(77, 70, 42, 1);
+}
+
+.infos h5 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    margin: 0;
+}
+
+.infos p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+hr {
+    border: 1px solid rgba(0, 0, 0, 1);
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+}
+
+.infos h4 ,
+h5,
+p {
+    margin: 0;
+}
+
+.reviewstars{
+    width: 125px;
+    height: 26px;
+}
