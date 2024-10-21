@@ -8,21 +8,26 @@ import Dashboard from "./Components/Dashboard/BusinessDashboard.jsx";
 import ClientProfile from "./Components/ClientProfile.jsx";
 import BusinessProfile from "./Components/BusinessProfile.jsx";
 
-function App() {
-  const location = useLocation();
+import {Amplify} from "aws-amplify";
+import awsExports from "./aws-exports";
 
-  return (
-    <>
-      {location.pathname !== "/login" && <Navbar />}
-      <div className="App">
-        <Routes>
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/clientprofile" element={<ClientProfile />} />
-          <Route path="/businessprofile" element={<BusinessProfile />} />
-        </Routes>
-      </div>
-    </>
-  );
+Amplify.configure(awsExports);
+
+function App() {
+    const location = useLocation();
+
+    return (
+        <>
+            {location.pathname !== "/login" && <Navbar />}
+            <div className="App">
+                <Routes>
+                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/clientprofile" element={<ClientProfile />} />
+                    <Route path="/businessprofile" element={<BusinessProfile />} />
+                </Routes>
+            </div>
+        </>
+    );
 }
 export default App;

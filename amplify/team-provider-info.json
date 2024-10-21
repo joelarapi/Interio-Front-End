@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-interio-dev-be895-authRole",
+      "UnauthRoleArn": "arn:aws:iam::944511268761:role/amplify-interio-dev-be895-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::944511268761:role/amplify-interio-dev-be895-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-interio-dev-be895-deployment",
+      "UnauthRoleName": "amplify-interio-dev-be895-unauthRole",
+      "StackName": "amplify-interio-dev-be895",
+      "StackId": "arn:aws:cloudformation:eu-central-1:944511268761:stack/amplify-interio-dev-be895/e288c8f0-8ed8-11ef-b683-063f533f4421",
+      "AmplifyAppId": "d3qlejxovx9p4a"
+    },
+    "categories": {
+      "auth": {
+        "interio59c1176b": {}
+      }
+    }
+  }
+}
