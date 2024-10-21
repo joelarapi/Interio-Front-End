@@ -88,7 +88,9 @@
 
 .card {
   flex: 0 0 auto;
+  min-width: 316px;
   width: 316px;
+  flex-shrink: 0;
   height: 322px;
   border: 1px solid silver;
   border-radius: 5px;
@@ -136,25 +138,31 @@ transition: 0.2s;
 .cardSection {
   display: flex;
   gap: 20px;
-  overflow-x: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
-  padding: 20px;
+  /* padding: 20px; */
   -ms-overflow-style: none;
   scrollbar-width: none;
+  width: calc(316px * 3 + 60px); 
+  margin: 0 ;
 }
 
 .cardSectionWrapper {
   position: relative;
+  display: flex;
+  align-items: center;
   width: 100%;
+  /* max-width: 1048px; */
+  margin: 0 auto;
 }
 
 .scrollButtonLeft, .scrollButtonRight {
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
   background-color: inherit;
-  border: 1px solid #ccc;
+  border: none ;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -169,11 +177,13 @@ transition: 0.2s;
 }
 
 .scrollButtonLeft {
-  left: -20px; 
+  position: relative;
+  left: 0; 
 }
 
 .scrollButtonRight {
-  right: -40px; 
+  position: relative;
+  right: 0; 
 } 
 .cardSection::-webkit-scrollbar {
   display: none;

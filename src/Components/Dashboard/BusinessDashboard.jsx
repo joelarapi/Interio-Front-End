@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./Dashboard.module.css";
 import DashboardMain from "./DashboardMain";
 
-const Dashboard = () => {
+const BusinessDashboard = () => {
   return (
     <div className={classes.container}>
       <div className={classes.sideContainer}>
@@ -115,4 +115,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default BusinessDashboard;

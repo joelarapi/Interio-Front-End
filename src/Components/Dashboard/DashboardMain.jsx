@@ -3,6 +3,7 @@ import loopIcon from "../../icons/search-loop-icon.png";
 import { Link } from "react-router-dom";
 import placeholderImage from "../../icons/placeholder-image-for-posts.png";
 import { useRef } from "react";
+import arrowLeft from '../../icons/left-arrow.png'
 
 const DashboardMain = () => {
   const scrollRef = useRef(null);
@@ -30,9 +31,9 @@ const DashboardMain = () => {
           <div className={classes.cardSectionWrapper}>
             <button
               className={classes.scrollButtonLeft}
-              onClick={() => scroll(-316)}
+              onClick={() => scroll(-336)}
             >
-              &#8592;
+              <img src={arrowLeft}/>
             </button>
 
             <div className={classes.cardSection} ref={scrollRef}>
@@ -110,7 +111,7 @@ const DashboardMain = () => {
 
             <button
                 className={classes.scrollButtonRight}
-                onClick={() => scroll(316)}
+                onClick={() => scroll(336)}
               >
                 &#8594;
               </button>
