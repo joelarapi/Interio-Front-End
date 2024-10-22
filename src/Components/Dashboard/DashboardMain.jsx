@@ -4,8 +4,12 @@ import { Link } from "react-router-dom";
 import placeholderImage from "../../icons/placeholder-image-for-posts.png";
 import { useRef } from "react";
 import arrowLeft from '../../icons/left-arrow.png'
+import arrowRight from '../../icons/right-arrow.png'
+import { useNavigate } from "react-router-dom";
 
 const DashboardMain = () => {
+
+  const navigate = useNavigate()
   const scrollRef = useRef(null);
 
   const scroll = (scrollOffset) => {
@@ -14,6 +18,12 @@ const DashboardMain = () => {
       console.log("ScrollLeft:", scrollRef.current.scrollLeft);
     }
   };
+
+  const handleGoToApplication = () =>{
+    navigate('/post/:id')
+  }
+
+
   return (
     <div className={classes.sideMain}>
       <div className={classes.mainContent}>
@@ -47,7 +57,7 @@ const DashboardMain = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do...
                   </p>
-                  <button>Apply</button>
+                  <button onClick={handleGoToApplication}>Apply</button>
                 </div>
               </div>
 
@@ -64,6 +74,7 @@ const DashboardMain = () => {
                   <button>Apply</button>
                 </div>
               </div>
+              
 
               <div className={classes.card}>
                 <img src={placeholderImage} />
@@ -113,9 +124,11 @@ const DashboardMain = () => {
                 className={classes.scrollButtonRight}
                 onClick={() => scroll(336)}
               >
-                &#8594;
+                <img src={arrowRight}/>
               </button>
           </div>
+
+          
         </div>
       </div>
     </div>

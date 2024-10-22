@@ -85,29 +85,6 @@ const BusinessDashboard = () => {
             </div>
           </div>
 
-          <div className={classes.filterSection}>
-            <h3>Number of Offers</h3>
-            <div>
-              <input type="checkbox" />
-              <label>Less than 5</label>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <label>5-10</label>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <label>10-20</label>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <label>20-50</label>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <label>+50</label>
-            </div>
-          </div>
         </div>
       </div>
       <DashboardMain />
