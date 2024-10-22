@@ -5,8 +5,8 @@ import { useLocation } from "react-router-dom";
 import Login from "./Components/Login.jsx"; 
 import Navbar from "./Components/Navbar.jsx";
 import Dashboard from "./Components/Dashboard/BusinessDashboard.jsx";
-import ClientProfile from "./Components/ClientProfile.jsx";
-import BusinessProfile from "./Components/BusinessProfile.jsx";
+import ClientProfile from "./Components/ClientProfile/ClientProfile.jsx";
+import BusinessProfile from "./Components/BusinessProfile/BusinessProfile.jsx";
 import Post from "./Components/Post/Post.jsx";
 
 import {Amplify} from "aws-amplify";
