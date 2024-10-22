@@ -52,7 +52,7 @@
     font-weight: 400;
     line-height: 24px;
     color: rgba(77, 70, 42, 1);
-
+    cursor: pointer;
 }
 
 .innerinfo h5 {
@@ -216,7 +216,7 @@
 }
 
 hr {
-    border: 1px solid rgba(0, 0, 0, 1);
+    border: 1px solid rgb(48, 47, 47);
 }
 
 .reviews {
@@ -224,13 +224,37 @@ hr {
     flex-direction: column;
 }
 
-.infos h4 ,
+.infos h4,
 h5,
 p {
     margin: 0;
 }
 
-.reviewstars{
+.reviewstars {
     width: 125px;
     height: 26px;
+}
+
+.editabout {
+    display: flex;
+    flex-direction: column;
+    margin-top: 94px;
+    margin-left: 41px;
+}
+
+.editabout h3 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+}
+
+.edittext input {
+    width: 921px;
+    height: 142px;
+    border: 1px solid rgba(153, 153, 153, 1);
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-left: 20px;
 }

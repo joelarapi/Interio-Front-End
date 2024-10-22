@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./BusinessProfile.module.css";
+import styles from "../BusinessProfile/BusinessProfile.module.css"
 import { Link } from "react-router-dom";
 
 const BusinessProfile = () => {
@@ -28,11 +28,11 @@ const BusinessProfile = () => {
                 <h5>14 Clients</h5>
               </Link>
               <div className={styles.profilebutton}>
-                <Link to={"/"} className={styles.links}>
-                  <button>Edit Profile</button>
+                <Link to={"/editprofile"} className={styles.links}>
+                  <button type="button">Edit Profile</button>
                 </Link>
                 <Link to={"/"} className={styles.links}>
-                  <button>Promote Now</button>
+                  <button type="button">Promote Now</button>
                 </Link>
               </div>
             </div>
