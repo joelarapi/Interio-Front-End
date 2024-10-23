@@ -1,0 +1,51 @@
+.sideContainer {
+  position: fixed;
+  top: 75px; 
+  left: 0; 
+  width: 305px;
+  align-items: center;
+  background-color: rgba(239, 239, 239, 1);
+  height: 100vh;
+  display: flex;
+  color: rgba(8, 7, 43, 1);
+  flex-direction: column;
+}
+
+.dropdownBttn {
+  border: none;
+  font-size: 18px;
+  font-family: "Poppins";
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 30px;
+}
+
+.dropdownBttn:hover{
+  background-color: rgb(207, 207, 207);
+}
+.arrow {
+  margin-left: 30px;
+  margin-top: 7px;
+  margin-right: 35px;
+}
+
+.dropdownMenu{
+  list-style: none;
+}
+.sideFiltersSection h2 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 30px;
+  margin-top: 24px;
+}
+
+.filterSection h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.filterSection {
+  margin-bottom: 20px;
+}

@@ -1,0 +1,57 @@
+.sponsorSection{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+.cardSectionWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* max-width: 1048px; */
+  margin: 0 auto;
+}
+
+.scrollButtonLeft, .scrollButtonRight {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background-color: inherit;
+  border: none ;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrollButtonLeft:hover, .scrollButtonRight:hover {
+  opacity: 0.8;
+}
+
+.scrollButtonLeft {
+  position: relative;
+  right: 31px;
+}
+
+.scrollButtonRight {
+  position: relative;
+  left: 31px;
+} 
+.cardSection::-webkit-scrollbar {
+  display: none;
+}
+
+.cardSection {
+  -ms-overflow-style: none;
+  scrollbar-width: none;  
+}

@@ -1,51 +1,28 @@
-.sideContainer {
-  position: relative;
-  left: 0;
-  width: 245px;
-  background-color: rgba(244, 244, 244, 1);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding-left: 45px;
-}
-
 .container {
   display: flex;
 }
 
-.sideFiltersSection h2 {
-  font-weight: 600;
-  font-size: 20px;
-}
-
-.filterSection h3 {
-  font-size: 20px;
-  font-weight: 400;
-  margin: 0;
-}
-
-.filterSection {
-  margin-bottom: 20px;
-}
-
 .sideMain {
-  margin:  0 auto;
-  width: 80%;
+  margin-left: 380px;
+  width: 100%;
 }
 
 .mainContent {
-  margin: auto;
-  width: 80%;
+  max-width: 990px;
 }
+
 
 .searchBar {
   width: 680px;
   height: 46px;
+  margin-top: 24px;
+  margin-bottom: 24px;
   border: 1px solid silver;
   border-radius: 10px;
   display: flex;
   align-items: center;
 }
+
 .searchBar input {
   border: none;
   width: 100%;
@@ -62,17 +39,41 @@
   margin-right: 10px;
 }
 
+
+.banner{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(77, 70, 42, 1);
+  border-radius: 6px;
+  margin-bottom: 32px;
+  max-width: 1000px;
+  width: 990px;
+}
+
+.banner p{
+  font-size: 32px;
+  color: white;
+  width: 430px;
+  margin-top: 35px;
+  margin-left: 35px;
+}
+
+.bannerDiv{
+  display: flex;
+}
+
 .section {
   width: 100%;
 }
-
 
 .headline {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 30px;
 }
+
 
 .headline p {
   font-size: 20px;
@@ -135,60 +136,8 @@ transition: 0.2s;
 }
 .cardSection {
   display: flex;
+  justify-content: space-between;
   gap: 20px;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  /* padding: 20px; */
-  -ms-overflow-style: none;
-  scrollbar-width: none;
   width: calc(316px * 3 + 60px); 
   margin: 0 ;
 }
-
-.cardSectionWrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  /* max-width: 1048px; */
-  margin: 0 auto;
-}
-
-.scrollButtonLeft, .scrollButtonRight {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-  background-color: inherit;
-  border: none ;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.scrollButtonLeft:hover, .scrollButtonRight:hover {
-  opacity: 0.8;
-}
-
-.scrollButtonLeft {
-  position: relative;
-  left: 0; 
-}
-
-.scrollButtonRight {
-  position: relative;
-  right: 0; 
-} 
-.cardSection::-webkit-scrollbar {
-  display: none;
-}
-
-.cardSection {
-  -ms-overflow-style: none;
-  scrollbar-width: none;  
-}
-

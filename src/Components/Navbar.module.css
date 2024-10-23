@@ -2,15 +2,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(33, 27, 27, 1);
+  background-color: rgba(8, 7, 43, 1);
   width: 100%;
-  color: black;
-  height: 67px;
+  height: 75px;
   margin: 0;
   border-bottom: 1px solid black;
   position: fixed;
   top: 0;
   z-index: 1;
+}
+
+.logo{
+  width: 166px;
+  height: 75px;
+  margin-left: 30px;
 }
 
 .webName{
@@ -22,8 +27,7 @@
 .navbar a{
   text-decoration: none;
   color: white;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-right: 50px;
 }
 
 .navbar a:hover{
@@ -40,6 +44,7 @@
 .notifIcon{
   width: 24px;
   height: 24px;
+  cursor: pointer;
 }
 
 
@@ -49,8 +54,5 @@
   justify-content: space-between;
 }
 
-.navbar img{
-  cursor: pointer;
-  color: black;
-}
+
 

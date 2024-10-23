@@ -1,23 +1,20 @@
-import classes from './Navbar.module.css';
-import { NavLink } from 'react-router-dom';
-import notifIcon from '../icons/notifications-bell-icon.png';
+import classes from "./Navbar.module.css";
+import { NavLink } from "react-router-dom";
+import notifIcon from "../icons/notifications-bell-icon.png";
+import logo from "../icons/interio-logo.png";
 
 const Navbar = () => {
   return (
     <div className={classes.navbar}>
-    <p className={classes.webName}>Interio</p>
-
-
-    <div className={classes.leftSide}>
-
-      <NavLink>Home</NavLink>
-      <NavLink>My Requests</NavLink>
-      <NavLink>Profile</NavLink>
-      <img src={notifIcon} className={classes.notifIcon}/>
-
+      <img src={logo} className={classes.logo} />
+      <div className={classes.leftSide}>
+        <NavLink to="/dashboard">Home</NavLink>
+        <NavLink>My Requests</NavLink>
+        <NavLink>Profile</NavLink>
+        <img src={notifIcon} className={classes.notifIcon} />
+      </div>
     </div>
-    </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
