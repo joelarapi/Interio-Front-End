@@ -8,6 +8,7 @@ import Dashboard from "./Components/Dashboard/BusinessDashboard.jsx";
 import ClientProfile from "./Components/ClientProfile/ClientProfile.jsx";
 import BusinessProfile from "./Components/BusinessProfile/BusinessProfile.jsx";
 import Post from "./Components/Post/Post.jsx";
+import LandingPage from "./Components/LandingPage/LandingPage.jsx";
 
 import {Amplify} from "aws-amplify";
 import awsExports from "./aws-exports";
@@ -19,9 +20,10 @@ function App() {
 
     return (
         <>
-            {location.pathname !== "/login" && <Navbar />}
+            {location.pathname !== "/login" || location.pathname !== "/landingPage" && <Navbar />}
             <div className="app">
                 <Routes>
+                    <Route path="/landingPage" element={< LandingPage />} />
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/clientprofile" element={<ClientProfile />} />
