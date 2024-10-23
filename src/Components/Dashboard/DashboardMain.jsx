@@ -38,7 +38,10 @@ const DashboardMain = () => {
           <SponsoredPosts/>
 
            
-
+          <div className={classes.headline}>
+            <p>Suggested for you</p>
+            <Link>Show More</Link>
+          </div>
             <div className={classes.cardSection} >
               <div className={classes.card}>
                 <img src={placeholderImage} />
@@ -83,6 +86,54 @@ const DashboardMain = () => {
               </div>
             </div>
 
+
+            <div className={classes.headline}>
+            <p>Newest</p>
+            <Link>Show More</Link>
+          </div>
+            <div className={classes.cardSection} >
+              <div className={classes.card}>
+                <img src={placeholderImage} />
+                <div className={classes.description}>
+                  <h2>Request Title</h2>
+                  <p className={classes.postTime}>9 hours ago | Category</p>
+                  <p className={classes.location}>Location</p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do...
+                  </p>
+                  <button onClick={handleGoToApplication}>Apply</button>
+                </div>
+              </div>
+
+              <div className={classes.card}>
+                <img src={placeholderImage} />
+                <div className={classes.description}>
+                  <h2>Request Title</h2>
+                  <p className={classes.postTime}>9 hours ago | Category</p>
+                  <p className={classes.location}>Location</p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do...
+                  </p>
+                  <button>Apply</button>
+                </div>
+              </div>
+
+              <div className={classes.card}>
+                <img src={placeholderImage} />
+                <div className={classes.description}>
+                  <h2>Request Title</h2>
+                  <p className={classes.postTime}>9 hours ago | Category</p>
+                  <p className={classes.location}>Location</p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do...
+                  </p>
+                  <button>Apply</button>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
     </div>

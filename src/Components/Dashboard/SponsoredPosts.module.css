@@ -1,57 +1,81 @@
-.sponsorSection{
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 60px;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.wrapper {
+  width: 988px;
+  padding:0;
+  margin-bottom: 57px;
 }
-
 
 .cardSectionWrapper {
   position: relative;
+  max-width: 988px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  width: 100%;
-  /* max-width: 1048px; */
-  margin: 0 auto;
 }
 
-.scrollButtonLeft, .scrollButtonRight {
-  position: fixed;
+.sponsorSection {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  scroll-behavior: smooth; 
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
+.sponsorTrack {
+  display: flex;
+  gap: 42px;
+  transition: transform 0.3s ease;
+  scroll-behavior: smooth;
+}
+
+.sponsorItem {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsorItem img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
+.scrollButtonLeft,
+.scrollButtonRight {
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
-  background-color: inherit;
-  border: none ;
+  background: inherit;
+  border: none;
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.scrollButtonLeft:hover, .scrollButtonRight:hover {
-  opacity: 0.8;
+.scrollButtonLeft:hover,
+.scrollButtonRight:hover {
+  background: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .scrollButtonLeft {
-  position: relative;
-  right: 31px;
+  left: -20px;
 }
 
 .scrollButtonRight {
-  position: relative;
-  left: 31px;
-} 
-.cardSection::-webkit-scrollbar {
-  display: none;
+  right: -20px;
 }
 
-.cardSection {
-  -ms-overflow-style: none;
-  scrollbar-width: none;  
+.scrollButtonLeft img,
+.scrollButtonRight img {
+  width: 24px;
+  height: 24px;
 }

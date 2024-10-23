@@ -43,7 +43,7 @@
 .banner{
   display: flex;
   justify-content: space-between;
-  background-color: rgba(77, 70, 42, 1);
+  background-color: rgba(8, 7, 43, 1);
   border-radius: 6px;
   margin-bottom: 32px;
   max-width: 1000px;
@@ -71,7 +71,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 
@@ -82,7 +82,8 @@
 
 .headline a {
   text-decoration: none;
-  color: rgba(170, 126, 81, 1);
+  color: rgba(234, 67, 53, 1);
+
 }
 
 .card {
@@ -115,7 +116,7 @@
 }
 
 .description button {
-  background-color: rgba(77, 70, 42, 1);
+  background-color: rgba(234, 67, 53, 1);
   color: white;
   font-family: "Poppins";
   border: none;
@@ -140,4 +141,5 @@ transition: 0.2s;
   gap: 20px;
   width: calc(316px * 3 + 60px); 
   margin: 0 ;
+  margin-bottom: 57px;
 }

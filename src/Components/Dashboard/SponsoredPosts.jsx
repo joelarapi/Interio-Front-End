@@ -12,31 +12,46 @@ const SponsoredPosts = () => {
   const scroll = (scrollOffset) => {
     if (scrollRef.current) {
       scrollRef.current.scrollLeft += scrollOffset;
-      console.log("ScrollLeft:", scrollRef.current.scrollLeft);
     }
   };
+
   return (
-    <div className={classes.cardSectionWrapper}>
-      <div className={classes.sponsorSection} ref={scrollRef}>
-        <button
+    <div className={classes.wrapper}>
+      <div className={classes.cardSectionWrapper}>
+      <button
           className={classes.scrollButtonLeft}
-          onClick={() => scroll(-336)}
+          onClick={() => scroll(-342)} 
         >
-          <img src={arrowLeft} />
+          <img src={arrowLeft} alt="Scroll left" />
         </button>
-        <img src={sponsor1} />
-        <img src={sponsor2} />
-        <img src={sponsor3} />
-        <img src={sponsor1} />
+
+        <div className={classes.sponsorSection} ref={scrollRef}>
+          <div className={classes.sponsorTrack}>
+            <div className={classes.sponsorItem}>
+              <img src={sponsor1} alt="Sponsor 1" />
+            </div>
+            <div className={classes.sponsorItem}>
+              <img src={sponsor2} alt="Sponsor 2" />
+            </div>
+            <div className={classes.sponsorItem}>
+              <img src={sponsor3} alt="Sponsor 3" />
+            </div>
+            <div className={classes.sponsorItem}>
+              <img src={sponsor1} alt="Sponsor 4" />
+            </div>
+          </div>
+        </div>
+
         <button
           className={classes.scrollButtonRight}
-          onClick={() => scroll(336)}
+          onClick={() => scroll(342)}
         >
-          <img src={arrowRight} />
+          <img src={arrowRight} alt="Scroll right" />
         </button>
       </div>
     </div>
   );
 };
+
 
 export default SponsoredPosts;
