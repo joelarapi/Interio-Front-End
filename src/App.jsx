@@ -21,7 +21,7 @@ function App() {
 
     return (
         <>
-            {location.pathname !== "/login" || location.pathname !== "/landingPage" && <Navbar />}
+            {(location.pathname !== "/login" && location.pathname !== "/landingPage") && <Navbar />}
             <div className="app">
                 <Routes>
                     <Route path="/landingPage" element={< LandingPage />} />
