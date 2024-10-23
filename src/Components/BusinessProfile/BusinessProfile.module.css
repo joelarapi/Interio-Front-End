@@ -1,5 +1,6 @@
 .profilemain {
     display: flex;
+    flex-direction: column;
     height: 100vh;
     width: 100%;
     margin-top: 43px;
@@ -11,7 +12,7 @@
     margin-left: 162px;
     width: 285px;
     height: 840px;
-    background-color: rgba(77, 70, 42, 1);
+    background-color: rgba(8, 7, 43, 1);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     flex: 0 0 25%;
@@ -52,7 +53,7 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    color: rgba(77, 70, 42, 1);
+    color: rgba(8, 7, 43, 1);
     cursor: pointer;
 }
 
@@ -70,7 +71,7 @@
 .innercontainer h3 {
     font-size: 32px;
     font-weight: 400;
-    color: rgba(77, 70, 42, 1);
+    color: rgba(8, 7, 43, 1);
     margin: 14px 0px 0px 0px;
 }
 
@@ -121,8 +122,7 @@
     display: flex;
     flex-direction: column;
     gap: 14px;
-    margin-top: 75px;
-    width: 907px;
+    width: 821px;
 }
 
 .reviewinfo h4 {
@@ -148,22 +148,57 @@
 
 .swipermedia {
     display: flex;
-    gap: 23px;
+    gap: 33px;
+}
+
+.workImg {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.workImg img {
+    width: 175px;
+    height: 141px;
+    border-radius: 10px;
+}
+
+.addmedia {
+    width: 222px;
+    height: 180px;
+    background-color: rgba(239, 239, 239, 1);
+    border-radius: 10px;
+}
+
+.insidemedia {
+    text-align: center;
+    margin-top: 71px;
 }
 
 .aboutbusiness {
-    width: 900px;
+    width: 793px;
     height: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutbusiness img {
+    width: 24px;
+    height: 24px;
 }
 
 .aboutbusiness h3 {
     font-size: 32px;
     font-weight: 400;
     margin: 43px 0px 0px 0px;
+    color: rgba(8, 7, 43, 1);
 }
 
-.aboutbusiness p {
+.aboutinfo p {
     font-family: Poppins;
+    width: 793px;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -171,23 +206,72 @@
     margin: 4px 0px 0px 0px;
 }
 
+.businesstabs {
+    display: flex;
+    flex-direction: row;
+    margin-top: 18px;
+}
+
+.tab1 {
+    width: 393px;
+    height: 77px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 1px solid rgba(8, 7, 43, 1);
+}
+
+.tab1 h3 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    color: rgba(8, 7, 43, 1);
+}
+
+.tab2 {
+    width: 402px;
+    height: 77px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: none;
+    background-color: rgba(239, 239, 239, 1);
+}
+
+.tab2 h3 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 36px;
+    color: rgba(8, 7, 43, 1);
+}
+
+
 .prevWork {
-    width: 907px;
+    width: 800px;
     height: 372px;
+    display: flex;
+    flex-direction: column;
 }
 
 .prevWork h3 {
     font-size: 32px;
     font-weight: 400;
+    color: rgba(8, 7, 43, 1);
     line-height: 48px;
 }
 
-.innerwork {
-    display: grid;
-    grid-template-columns: 150px 716px;
-    margin-bottom: 24px;
-    margin-top: 40px;
+hr {
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    margin-top: 17px;
 }
+
+h6 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
 
 .title {
     display: flex;
@@ -200,25 +284,31 @@
     font-size: 20px;
     font-weight: 700;
     line-height: 30px;
-    color: rgba(77, 70, 42, 1);
+    color: rgba(8, 7, 43, 1);
 }
 
 .infos h5 {
     font-size: 18px;
     font-weight: 400;
     line-height: 27px;
-    margin: 0;
+    margin-top: 8px;
+}
+
+.infos h4 {
+    color: rgba(8, 7, 43, 1);
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 8px;
 }
 
 .infos p {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+    margin-top: 8px;
+    color: rgba(0, 0, 0, 1);
 }
 
-hr {
-    border: 1px solid rgb(48, 47, 47);
-}
 
 .reviews {
     display: flex;
@@ -236,26 +326,79 @@ p {
     height: 26px;
 }
 
-.editabout {
-    display: flex;
-    flex-direction: column;
+/* EDIT PROFILE-BUSINESS */
+.abouttitle {
+    margin-left: 470px;
     margin-top: 94px;
-    margin-left: 41px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.editabout h3 {
+.abouttitle h3 {
     font-size: 32px;
     font-weight: 400;
-    line-height: 48px;
+    margin: 0;
 }
 
-.edittext input {
-    width: 921px;
+.abouttitle img {
+    margin-right: 82px;
+}
+
+.aboutinput input {
+    margin-left: 470px;
+    margin-top: 4px;
+    width: 725px;
     height: 142px;
-    border: 1px solid rgba(153, 153, 153, 1);
     border-radius: 10px;
+    border: 1px solid rgba(153, 153, 153, 1);
+}
+
+input::placeholder {
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
     margin-left: 20px;
+}
+
+.previouswork {
+    margin-left: 470px;
+    margin-top: 40px;
+}
+
+.previouswork h3 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    margin: 0;
+}
+
+.previouswork h4 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    color: rgba(153, 153, 153, 1);
+    text-align: center;
+}
+
+.portfolio {
+    margin-left: 470px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.portfolio img {
+    margin-right: 82px;
+}
+
+.portfolio h3 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    color: rgba(77, 70, 42, 1);
+}
+
+.portfolioUpload img {
+    margin-left: 470px;
 }

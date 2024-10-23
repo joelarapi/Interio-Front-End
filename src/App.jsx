@@ -7,6 +7,7 @@ import Navbar from "./Components/Navbar.jsx";
 import Dashboard from "./Components/Dashboard/BusinessDashboard.jsx";
 import ClientProfile from "./Components/ClientProfile/ClientProfile.jsx";
 import BusinessProfile from "./Components/BusinessProfile/BusinessProfile.jsx";
+import EditProfile from "./Components/BusinessProfile/EditProfile.jsx";
 import Post from "./Components/Post/Post.jsx";
 import LandingPage from "./Components/LandingPage/LandingPage.jsx";
 
@@ -28,6 +29,7 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/clientprofile" element={<ClientProfile />} />
                     <Route path="/businessprofile" element={<BusinessProfile />} />
+                    <Route path="/editprofile" element={<EditProfile />} />
                     <Route path="/post/:id" element={<Post/>}/>
                 </Routes>
             </div>

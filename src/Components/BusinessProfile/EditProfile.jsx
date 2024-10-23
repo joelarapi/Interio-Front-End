@@ -26,12 +26,24 @@ const EditProfile = () => {
               </div>
             </div>
           </div>
-        </div>  
-        <div className={styles.editabout}>
-            <h3>About Business</h3>
-            <div className={styles.edittext}>
-                <input type="text" placeholder="Add your business description here..." />
-            </div>
+        </div>
+        <div className={styles.abouttitle}>
+          <h3>About Business</h3>
+          <img src="plus.svg" alt="" />
+        </div>
+        <div className={styles.aboutinput}>
+          <input type="text" name="" id="description" placeholder="Add your business description here..." />
+        </div>
+        <div className={styles.previouswork}>
+          <h3>Previous Work</h3>
+          <h4>No Previous Work</h4>
+        </div>
+        <div className={styles.portfolio}>
+          <h3>Portfolio</h3>
+          <img src="plus.svg" alt="" />
+        </div>
+        <div className={styles.portfolioUpload}>
+          <img src="Frame 83.png" alt="" />
         </div>
       </div>
     </>
