@@ -1,4 +1,7 @@
 .landing-page{
-    margin-top: -70px;
-    background-color: bisque;
+    background-color: rgba(255, 255, 255, 1);
+    height: 80vh;
+    width: 80%;
+    margin-left: 140px;
+    margin-top: 120px;
 }
