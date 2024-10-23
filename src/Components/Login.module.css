@@ -1,6 +1,4 @@
 .outerContainer{
-    margin: 0;
-    padding: 0;
     display: flex;
     overflow: hidden;
     justify-content: center;
@@ -16,7 +14,7 @@
     width: 100%;
     max-width:1400px;
     height: 95vh;
-    margin: 20px auto;
+    margin:-50px auto   ;
     border: 1px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
@@ -50,6 +48,7 @@
 }
 
 .formContainer{
+    position: relative;
     width: 100%;
     max-width: 880px;
     margin: 0;
@@ -81,7 +80,7 @@
 .registerText span{
     text-decoration: underline;
     cursor: pointer;
-    color: #AA7E51;
+    color: #EA4335;
 }
 
 
@@ -148,7 +147,7 @@
 }
 
 .input.filled{
-    border-bottom: 2px solid #4D462A;
+    border-bottom: 2px solid #EA4335;
 }
 
 .passwordWrapper {
@@ -185,14 +184,14 @@
 }
 
 .submitButton.active{
-    background-color: #4D462A;
+    background-color: #EA4335;
     cursor: pointer;
     color: white;
 }
 
 .input:focus{
     outline: none;
-    border-bottom: 2px solid #4D462A;
+    border-bottom: 2px solid #EA4335;
 }
 
 .submitButton.active:hover{
@@ -256,7 +255,7 @@
 
 
 .selected{
-    border: 0.08rem solid #000000;
+    border: 0.1rem solid #EA4335;
     color: white;
 }
 
@@ -276,6 +275,15 @@
     font-weight: 400;
     right: -200px;
     cursor: pointer;
+}
+
+.logo{
+    position: relative;
+    z-index: 100;
+    display: flex;
+    margin-top: -45rem;
+    margin-left: -28rem;
+
 }
 
 

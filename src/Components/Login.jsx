@@ -69,29 +69,41 @@ function Login() {
         setIsRegister(!isRegister);
     }
 
-    const saveUserToDataBase = async (userData) =>{
+    const saveUserToDataBase = async (userData) => {
+        const createUrl = userType === 'client'
+            ? 'https://akvct836lc.execute-api.eu-central-1.amazonaws.com/dev/user'
+            : 'https://akvct836lc.execute-api.eu-central-1.amazonaws.com/dev/business';
+
+        const bodyData = {
+            email: userData.email,
+            cognitoId: userData.cognitoId
+        };
+
+        if (userType === 'client') {
+            bodyData.username = userData.username;
+        } else {
+            bodyData.businessName = userData.businessName;
+            bodyData.location = userData.location;
+        }
+
         try {
-            const response = await fetch('https://akvct836lc.execute-api.eu-central-1.amazonaws.com/dev/user', {
+            const response = await fetch(createUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 },
-                body: JSON.stringify({
-                    email: userData.email,
-                    username: userData.username,
-                    cognitoId: userData.cognitoId
-                })
+                body: JSON.stringify(bodyData)
             });
             const responseText = await response.text();
-            if(response.ok){
+            if (!response.ok) {
                 throw new Error(`Failed to save user data: ${responseText}`);
             }
-            try{
-            const data = JSON.parse(responseText);
+            try {
+                const data = JSON.parse(responseText);
                 console.log('User data saved successfully:', data);
                 return data;
-            }catch (e){
+            } catch (e) {
                 console.error('Failed to parse response:', e);
                 return responseText;
             }
@@ -102,9 +114,7 @@ function Login() {
             });
             throw error;
         }
-
-        }
-
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -139,13 +149,15 @@ function Login() {
                 const userData = {
                     email: createEmail,
                     username: `${firstName} ${lastName}`,
+                    businessName: userType === 'business' ? `${businessName}` : undefined,
+                    location: userType === 'business' ? `${location}` : undefined,
                     cognitoId: SignUpResponse.userId
                 };
 
 
                 try{
-                    await saveUserToDataBase(userData);
                     setIsConfirmationStep(true);
+                    await saveUserToDataBase(userData);
                     alert('User signed up, confirm your email');
                 } catch (dbError){
                     console.error('Detailed database error:', {
@@ -193,11 +205,13 @@ function Login() {
 
     const isSignupFormFilled = () => {
         const commonFields = isCreateEmailFilled && isCreatePasswordFilled && isConfirmPasswordFilled && isFirstNameFilled && isLastNameFilled;
+        const businessFields = isCreateEmailFilled && isCreatePasswordFilled && isConfirmPasswordFilled && isBusinessNameFilled && isLocationFilled
         if (userType === 'client') {
             return commonFields;
-        } else {
-            return commonFields && isBusinessNameFilled && isLocationFilled;
+        } else if(userType === 'business'){
+            return businessFields;
         }
+        return false
     };
 
     const handleForgotPassword = async (e) => {
@@ -252,6 +266,7 @@ function Login() {
         <div className="outerContainer">
         <div className={styles.container}>
             <div className={`${styles.imageContainer} ${isRegister ? styles.loginBackground : styles.signupBackground}`}>
+                {!isRegister && (<img src='/Group%2064.png' alt='logo' className={styles.logo}/> )}
             </div>
             <div className={`${styles.formContainer}`}>
                 <div className={`${styles.formWrapper}`}>
