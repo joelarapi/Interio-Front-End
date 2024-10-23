@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Login from "./Components/Login.jsx"; 
 import Navbar from "./Components/Navbar.jsx";
 import Dashboard from "./Components/Dashboard/BusinessDashboard.jsx";
@@ -10,6 +11,7 @@ import BusinessProfile from "./Components/BusinessProfile/BusinessProfile.jsx";
 import EditProfile from "./Components/BusinessProfile/EditProfile.jsx";
 import Post from "./Components/Post/Post.jsx";
 import LandingPage from "./Components/LandingPage/LandingPage.jsx";
+import Loader from './Components/Loader/Loader.jsx';
 
 import {Amplify} from "aws-amplify";
 import awsExports from "./aws-exports";
@@ -18,11 +20,22 @@ Amplify.configure(awsExports);
 
 function App() {
     const location = useLocation();
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+
+        return () => clearTimeout(timer);
+    }, []);
 
     return (
         <>
             {(location.pathname !== "/login" && location.pathname !== "/landingPage") && <Navbar />}
             <div className="app">
+            {loading ? (
+                    <Loader />
+                ) : (
                 <Routes>
                     <Route path="/landingPage" element={< LandingPage />} />
                     <Route path="/dashboard" element={<Dashboard />} />
@@ -32,6 +45,7 @@ function App() {
                     <Route path="/editprofile" element={<EditProfile />} />
                     <Route path="/post/:id" element={<Post/>}/>
                 </Routes>
+                    )}
             </div>
         </>
     );
