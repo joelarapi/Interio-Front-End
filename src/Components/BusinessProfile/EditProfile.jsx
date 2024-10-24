@@ -85,7 +85,6 @@ const EditProfile = () => {
         throw new Error("Failed to update business profile");
       }
 
-      // Optionally redirect or show a success message
       alert("Profile updated successfully!");
     } catch (error) {
       console.error("Error updating business profile:", error);
@@ -138,20 +137,20 @@ const EditProfile = () => {
         </div>
         <form className={styles.formContainer} onSubmit={(e) => e.preventDefault()}>
           <div className={styles.formGroup}>
-            <label className="businessName">Business Name</label>
-            <input type="text" value={businessName} onChange={(e) => setBusinessName(e.target.value)} placeholder="Business Name" />
+            <label className={styles.businessLabel}>Business Name</label>
+            <input type={styles.businessInput} value={businessName} onChange={(e) => setBusinessName(e.target.value)} placeholder="Business Name" />
           </div>
           <div className={styles.formGroup}>
-            <label className="category">Category</label>
-            <input type="text" value={category} onChange={(e) => setCategory(e.target.value)} placeholder="Category" />
+            <label className={styles.businessLabel}>Category</label>
+            <input type={styles.businessInput} value={category} onChange={(e) => setCategory(e.target.value)} placeholder="Category" />
           </div>
           <div className={styles.formGroup}>
-            <label className="location">Location</label>
-            <input type="text" value={location} onChange={(e) => setLocation(e.target.value)} placeholder="Location" />
+            <label className={styles.businessLabel}>Location</label>
+            <input type={styles.businessInput} value={location} onChange={(e) => setLocation(e.target.value)} placeholder="Location" />
           </div>
           <div className={styles.formGroup}>
-            <label className="email">Email</label>
-            <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="example@email.com" />
+            <label className={styles.businessLabel}>Email</label>
+            <input className={styles.businessInput} type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="example@email.com" />
           </div>
         </form>
         <div className={styles.portfolio}>
@@ -165,7 +164,7 @@ const EditProfile = () => {
         <Link to={"/businesspage"}>
           <button className={styles.saveBtn} onClick={handleSave}>
             Save
-          </button> 
+          </button>
         </Link>
       </div>
     </>
