@@ -15,6 +15,7 @@ import Loader from "./Components/Loader/Loader.jsx";
 
 import { Amplify } from "aws-amplify";
 import awsExports from "./aws-exports";
+import BusinessView from "./Components/BusinessView/BusinessView.jsx";
 
 Amplify.configure(awsExports);
 
@@ -43,6 +44,7 @@ function App() {
             <Route path="/clientprofile" element={<ClientProfile />} />
             <Route path="/businessprofile" element={<BusinessProfile />} />
             <Route path="/editprofile" element={<EditProfile />} />
+            <Route path="/businessview" element={<BusinessView />} />
             <Route path="/post/:id" element={<Post />} />
           </Routes>
         )}
