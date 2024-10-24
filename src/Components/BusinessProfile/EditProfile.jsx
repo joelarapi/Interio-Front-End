@@ -1,14 +1,84 @@
-import React from "react";
-import styles from "../BusinessProfile/BusinessProfile.module.css";
+import React, { useState, useEffect } from "react";
+import styles from "../BusinessProfile/EditProfile.module.css"
 import { Link } from "react-router-dom";
+
 const EditProfile = () => {
+  const [profileImage, setProfileImage] = useState("");
+  const [businessName] = useState("Business Name");
+  const [initials, setInitials] = useState("");
+  const [errorMessage, setErrorMessage] = useState(""); 
+
+  useEffect(() => {
+    const nameParts = businessName.split(" ");
+    const initials = nameParts.map(part => part[0].toUpperCase()).join("");
+    setInitials(initials);
+  }, [businessName]);
+
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const imageUrl = URL.createObjectURL(file);
+      const img = new Image();
+      img.onload = function () {
+        if (img.width < 129 || img.height < 128) {
+          setErrorMessage("Image is too small, try another one."); 
+        } else {
+          setProfileImage(imageUrl); 
+          setErrorMessage("");
+        }
+      };
+      img.src = imageUrl;
+    }
+  };
+
+  const handleImageClick = () => {
+    document.getElementById("imageUpload").click();
+  };
+  const handleCloseError = () => {
+    setErrorMessage("");
+  };
+
   return (
     <>
       <div className={styles.profilemain}>
         <div className={styles.profilebar}>
-          <img src="placeholder.png" alt="profile" className={styles.imageprofile}></img>
+          <div className={styles.imageWrapper}>
+            {profileImage ? (
+              <img
+                src={profileImage}
+                alt="profile"
+                className={styles.imageprofile}
+                onClick={handleImageClick}
+                style={{ cursor: "pointer" }}
+              />
+            ) : (
+              <div
+                className={styles.initialsPlaceholder}
+                onClick={handleImageClick}
+                style={{ cursor: "pointer" }}
+              >
+                {initials}
+              </div>
+            )}
+            <input
+              type="file"
+              id="imageUpload"
+              accept="image/png, image/jpeg"
+              style={{ display: "none" }}
+              onChange={handleImageChange}
+            />
+          </div>
+          {errorMessage && (
+            <div className={styles.errorMessage}>
+              <span>{errorMessage}</span>
+              <button className={styles.closeButton} onClick={handleCloseError}>
+                &times;
+              </button>
+            </div>
+          )}
+
           <div className={styles.profileinfo}>
-            <h3>Business Name</h3>
+            <h3>{businessName}</h3>
             <div className={styles.innerinfo}>
               <Link to={"/"} className={styles.links}>
                 <h5>Category</h5>
@@ -27,24 +97,10 @@ const EditProfile = () => {
             </div>
           </div>
         </div>
-        <div className={styles.abouttitle}>
-          <h3>About Business</h3>
-          <img src="plus.svg" alt="" />
-        </div>
-        <div className={styles.aboutinput}>
-          <input type="text" name="" id="description" placeholder="Add your business description here..." />
-        </div>
-        <div className={styles.previouswork}>
-          <h3>Previous Work</h3>
-          <h4>No Previous Work</h4>
-        </div>
-        <div className={styles.portfolio}>
-          <h3>Portfolio</h3>
-          <img src="plus.svg" alt="" />
-        </div>
-        <div className={styles.portfolioUpload}>
-          <img src="Frame 83.png" alt="" />
-        </div>
+          <form className={styles.editbusiness}>
+            <div className={styles.inputs}>
+            </div>
+          </form>
       </div>
     </>
   );
