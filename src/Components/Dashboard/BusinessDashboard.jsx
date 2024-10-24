@@ -1,14 +1,14 @@
-import classes from "./DashboardMain.module.css";
 import DashboardMain from "./DashboardMain";
-import Filters from "./Filters";
+import Filters from "./Filters"
+import classes from "./DashboardMain.module.css";
 
 const BusinessDashboard = () => {
   return (
-    <div className={classes.container}>
+    <div>
       <Filters/>
-      <DashboardMain />
+      <DashboardMain className={classes.businessDashboard}/>
     </div>
-  );
-};
+  )
+}
 
 export default BusinessDashboard;

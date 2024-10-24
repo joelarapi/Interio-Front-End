@@ -5,17 +5,17 @@ import placeholderImage from "../../icons/placeholder-image-for-posts.png";
 import { useNavigate } from "react-router-dom";
 import SponsoredPosts from "./SponsoredPosts";
 
-const DashboardMain = () => {
+const DashboardMain = ({className}) => {
   const navigate = useNavigate();
 
 
-  const handleGoToApplication = () => {
+  const handleNavigateToPost = () => {
     navigate("/post/:id");
   };
 
   return (
-    <div className={classes.sideMain}>
-      <div className={classes.mainContent}>
+
+      <div className={`${classes.mainContent} ${className || ''}`}>
         <div className={classes.searchBar}>
           <img src={loopIcon} />
           <input type="search" placeholder="Search for job Offers..." />
@@ -53,7 +53,7 @@ const DashboardMain = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do...
                   </p>
-                  <button onClick={handleGoToApplication}>Apply</button>
+                  <button onClick={handleNavigateToPost}>View</button>
                 </div>
               </div>
 
@@ -67,7 +67,7 @@ const DashboardMain = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do...
                   </p>
-                  <button>Apply</button>
+                  <button>View</button>
                 </div>
               </div>
 
@@ -81,7 +81,7 @@ const DashboardMain = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do...
                   </p>
-                  <button>Apply</button>
+                  <button>View</button>
                 </div>
               </div>
             </div>
@@ -102,7 +102,7 @@ const DashboardMain = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do...
                   </p>
-                  <button onClick={handleGoToApplication}>Apply</button>
+                  <button>View</button>
                 </div>
               </div>
 
@@ -116,7 +116,7 @@ const DashboardMain = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do...
                   </p>
-                  <button>Apply</button>
+                  <button>View</button>
                 </div>
               </div>
 
@@ -130,13 +130,12 @@ const DashboardMain = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do...
                   </p>
-                  <button>Apply</button>
+                  <button>View</button>
                 </div>
               </div>
             </div>
         </div>
       </div>
-    </div>
   );
 };
 

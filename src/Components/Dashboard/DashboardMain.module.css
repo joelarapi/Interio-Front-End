@@ -2,16 +2,17 @@
   display: flex;
 }
 
-.sideMain {
-  margin-left: 380px;
-  width: 100%;
-}
 
 .mainContent {
-  max-width: 990px;
+  margin: auto;
+  margin-top: 110px;
+  max-width: 1000px;
 }
 
-
+.businessDashboard {
+  margin: 110px 0 0 370px !important; 
+  max-width: calc(100% - 370px) !important; 
+}
 .searchBar {
   width: 680px;
   height: 46px;
@@ -70,7 +71,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 1000px;
   margin-bottom: 20px;
 }
 
