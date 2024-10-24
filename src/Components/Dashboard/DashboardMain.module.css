@@ -2,16 +2,17 @@
   display: flex;
 }
 
-.sideMain {
-  margin-left: 380px;
-  width: 100%;
-}
 
 .mainContent {
-  max-width: 990px;
+  margin: auto;
+  margin-top: 110px;
+  max-width: 1000px;
 }
 
-
+.businessDashboard {
+  margin: 110px 0 0 370px !important; 
+  max-width: calc(100% - 370px) !important; 
+}
 .searchBar {
   width: 680px;
   height: 46px;
@@ -70,7 +71,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 1000px;
   margin-bottom: 20px;
 }
 
@@ -107,12 +108,15 @@
   font-size: 18px;
   font-weight: 700;
   margin: 0;
+  margin-top: 8px;
+  margin-bottom: 4px;
 }
 
 .postTime {
   font-size: 14px;
   color: rgba(153, 153, 153, 1);
   margin: 0;
+  margin-bottom: 8px;
 }
 
 .description button {
@@ -134,6 +138,7 @@ transition: 0.2s;
 
 .location{
   margin: 0;
+  margin-bottom: 8px;
 }
 .cardSection {
   display: flex;
