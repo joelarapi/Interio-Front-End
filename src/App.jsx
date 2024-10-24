@@ -14,6 +14,7 @@ import Post from "./Components/Post/Post.jsx";
 import PostForm from "./Components/PostForm/PostForm.jsx";
 import LandingPage from "./Components/LandingPage/LandingPage.jsx";
 import Loader from "./Components/Loader/Loader.jsx";
+import Footer from "./Components/footer.jsx";
 
 import { Amplify } from "aws-amplify";
 import awsExports from "./aws-exports";
@@ -49,6 +50,7 @@ function App() {
         {loading ? (
           <Loader />
         ) : (
+<<<<<<< Updated upstream
           <Routes>
             <Route path="/landingPage" element={<LandingPage />} />
             <Route path="/dashboard" element={<Dashboard />} />
@@ -59,6 +61,20 @@ function App() {
             <Route path="/businessview" element={<BusinessView />} />
             <Route path="/post/:id" element={<Post />} />
           </Routes>
+=======
+          <>
+            <Routes>
+              <Route path="/landingPage" element={<LandingPage />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/clientprofile" element={<ClientProfile />} />
+              <Route path="/businessprofile" element={<BusinessProfile />} />
+              <Route path="/editprofile" element={<EditProfile />} />
+              <Route path="/post/:id" element={<Post />} />
+            </Routes>
+            {/* {location.pathname !== "/login" && location.pathname !== "/landingPage" && <Footer />} */}
+          </>
+>>>>>>> Stashed changes
         )}
       </div>
     </>
