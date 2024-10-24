@@ -14,7 +14,6 @@ import Post from "./Components/Post/Post.jsx";
 import PostForm from "./Components/PostForm/PostForm.jsx";
 import LandingPage from "./Components/LandingPage/LandingPage.jsx";
 import Loader from "./Components/Loader/Loader.jsx";
-import Footer from "./Components/footer.jsx";
 
 import { Amplify } from "aws-amplify";
 import awsExports from "./aws-exports";
@@ -48,6 +47,7 @@ function App() {
                     <Route path="/clientprofile" element={<ClientProfile />} />
                     <Route path="/businessprofile" element={<BusinessProfile />} />
                     <Route path="/editprofile" element={<EditProfile />} />
+                    <Route path="/businessview" element={<BusinessView />} />
                     <Route path="/post/:id" element={<Post/>}/>
                     <Route path="/post/create" element={<PostForm/>}/>
                 </Routes>

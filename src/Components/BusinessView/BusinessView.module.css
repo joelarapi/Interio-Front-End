@@ -1,0 +1,137 @@
+.businessView {
+    display: flex;
+    flex-direction: row;
+}
+
+.requestsBar {
+    margin-left: 76px;
+    padding-top: 54px;
+    display: flex;
+    flex-direction: column;
+}
+
+.requestsBar h4 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    color: rgba(8, 7, 43, 1);
+}
+
+.requestGray {
+    background-color: rgba(239, 239, 239, 1);
+    width: 457px;
+    height: 162px;
+}
+
+.requestContainer {
+    display: grid;
+    grid-template-columns: 130px 300px;
+}
+
+.requestContainer img {
+    margin-top: 17px;
+    margin-left: 11px;
+}
+
+.descriptionBusiness {
+    margin-top: 10px;
+}
+
+.requestContainer h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.requestContainer h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(153, 153, 153, 1);
+    margin: 0;
+}
+
+.requestContainer p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    width: 298px;
+
+}
+
+.clientPost {
+    margin-left: 42px;
+    margin-top: 75px;
+}
+
+.clientPost h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0;
+    color: rgba(8, 7, 43, 1);
+}
+
+.clientPost h4 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.categoryBtn {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    margin-top: 16px;
+}
+
+.categoryBtn button {
+    width: 93px;
+    height: 28px;
+    background-color: rgba(234, 67, 53, 1);
+    color: white;
+    border: none;
+    border-radius: 13.75px;
+}
+
+.clientPost p {
+    width: 774px;
+    height: 108px;
+    margin-top: 23px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.clientPost img {
+    margin-top: 10px;
+    border-radius: 19.22px;
+}
+
+.morePosts {
+    display: flex;
+    flex-direction: row;
+    gap: 8.8px;
+    margin-top: 17.77px;
+}
+
+.morePosts img {
+    opacity: 70%;
+}
+
+.most3 {
+    width: 141.39px;
+    height: 104.27px;
+    margin-top: 10px;
+    background-color: rgba(217, 217, 217, 1);
+    border-radius: 8.84px;
+}
+
+.offerBtn {
+    width: 742px;
+    height: 57px;
+    background-color: rgba(234, 67, 53, 1);
+    border: none;
+    border-radius: 5px;
+    margin-top: 9.73px;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+}

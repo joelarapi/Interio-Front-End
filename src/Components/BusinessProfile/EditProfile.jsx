@@ -138,19 +138,19 @@ const EditProfile = () => {
         <form className={styles.formContainer} onSubmit={(e) => e.preventDefault()}>
           <div className={styles.formGroup}>
             <label className={styles.businessLabel}>Business Name</label>
-            <input type={styles.businessInput} value={businessName} onChange={(e) => setBusinessName(e.target.value)} placeholder="Business Name" />
+            <input className={styles.businessInput} value={businessName} onChange={(e) => setBusinessName(e.target.value)} placeholder="Business Name" />
           </div>
           <div className={styles.formGroup}>
             <label className={styles.businessLabel}>Category</label>
-            <input type={styles.businessInput} value={category} onChange={(e) => setCategory(e.target.value)} placeholder="Category" />
+            <input className={styles.businessInput} value={category} onChange={(e) => setCategory(e.target.value)} placeholder="Category" />
           </div>
           <div className={styles.formGroup}>
             <label className={styles.businessLabel}>Location</label>
-            <input type={styles.businessInput} value={location} onChange={(e) => setLocation(e.target.value)} placeholder="Location" />
+            <input className={styles.businessInput} value={location} onChange={(e) => setLocation(e.target.value)} placeholder="Location" />
           </div>
           <div className={styles.formGroup}>
             <label className={styles.businessLabel}>Email</label>
-            <input className={styles.businessInput} type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="example@email.com" />
+            <input className={styles.businessInput} value={email} onChange={(e) => setEmail(e.target.value)} placeholder="example@email.com" />
           </div>
         </form>
         <div className={styles.portfolio}>
