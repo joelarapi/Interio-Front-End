@@ -28,12 +28,12 @@
 
 
 .profileinfo {
-    padding-top: 88px;
     display: flex;
     flex-direction: column;
     text-align: left;
     padding-left: 30px;
     width: 285px;
+    margin-top: 60px;
 }
 
 .profileinfo h3 {
@@ -91,7 +91,7 @@
 
 .maininfo {
     margin-top: 43px;
-    margin-left: 474px;
+    margin-left: 485px;
 }
 
 .innerreview {
@@ -326,79 +326,3 @@ p {
     height: 26px;
 }
 
-/* EDIT PROFILE-BUSINESS */
-.abouttitle {
-    margin-left: 470px;
-    margin-top: 94px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.abouttitle h3 {
-    font-size: 32px;
-    font-weight: 400;
-    margin: 0;
-}
-
-.abouttitle img {
-    margin-right: 82px;
-}
-
-.aboutinput input {
-    margin-left: 470px;
-    margin-top: 4px;
-    width: 725px;
-    height: 142px;
-    border-radius: 10px;
-    border: 1px solid rgba(153, 153, 153, 1);
-}
-
-input::placeholder {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 30px;
-    margin-left: 20px;
-}
-
-.previouswork {
-    margin-left: 470px;
-    margin-top: 40px;
-}
-
-.previouswork h3 {
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 48px;
-    margin: 0;
-}
-
-.previouswork h4 {
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 48px;
-    color: rgba(153, 153, 153, 1);
-    text-align: center;
-}
-
-.portfolio {
-    margin-left: 470px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.portfolio img {
-    margin-right: 82px;
-}
-
-.portfolio h3 {
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 48px;
-    color: rgba(77, 70, 42, 1);
-}
-
-.portfolioUpload img {
-    margin-left: 470px;
-}

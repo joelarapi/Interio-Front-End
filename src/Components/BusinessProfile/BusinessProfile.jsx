@@ -3,8 +3,18 @@ import styles from "../BusinessProfile/BusinessProfile.module.css";
 import { Link } from "react-router-dom";
 
 const BusinessProfile = () => {
-  const [activeTab, setActiveTab] = useState("portfolio"); 
+  const [activeTab, setActiveTab] = useState("portfolio");
+  const [isEditing, setIsEditing] = useState(false);
+  const [description, setDescription] = useState("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.");
+  const handleEditClick = () => {
+    setIsEditing(!isEditing);
+  };
 
+  const handleChange = (event) => {
+    setDescription(event.target.value);
+  };
+
+  
   return (
     <>
       <div className={styles.profilemain}>
@@ -44,7 +54,6 @@ const BusinessProfile = () => {
         <div className={styles.maininfo}>
           <div className={styles.aboutbusiness}>
             <h3>About Business</h3>
-            <img src="fi-sr-pencil.svg" alt="edit" />
           </div>
           <div className={styles.aboutinfo}>
             <p>
@@ -90,6 +99,9 @@ const BusinessProfile = () => {
                       <p>Add Ads</p>
                     </div>
                   </div>
+                  {/* <img src="/src/Components/Dashboard/sponsored-icons/sponsor-1.png" alt="" />
+                        <img src="/src/Components/Dashboard/sponsored-icons/sponsor-2.png" alt="" />
+                        <img src="/src/Components/Dashboard/sponsored-icons/sponsor-3.png" alt="" /> */}
                 </div>
               </div>
             </div>
